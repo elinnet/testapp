@@ -2,13 +2,12 @@ angular.module('starter.controllers', [])
 
 .controller('WodCtrl', function($scope) {
 
-  $scope.workout1 = "123";
   $scope.workout = [
     {
       "day": "Mon 06/10/15",
       "box": "CF Hackney",
-      "strength1": "Strength",
-      "metcon": "Metcon"
+      "strength": "12 min E2MOM, 6 rounds of:, 1 Power Clean, 2 Split Jerks",
+      "metcon": "4 rounds of:, 3 min AMRAP of:, 2 Power Clean and Jerk, 4 Over the Bar Burpees"
     },
     {
       "day": "Tues 07/10/15",
@@ -18,7 +17,9 @@ angular.module('starter.controllers', [])
     },
   ];
 
-  var currentDay = $scope.workout[0];
+  $scope.currentDayStrength = $scope.workout[0].strength.split(", ");
+
+  $scope.currentDayMetcon = $scope.workout[0].metcon.split(", ");
 
 })
 
