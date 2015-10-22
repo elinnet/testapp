@@ -1,6 +1,26 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {})
+.controller('WodCtrl', function($scope) {
+
+  $scope.workout1 = "123";
+  $scope.workout = [
+    {
+      "day": "Mon 06/10/15",
+      "box": "CF Hackney",
+      "strength1": "Strength",
+      "metcon": "Metcon"
+    },
+    {
+      "day": "Tues 07/10/15",
+      "box": "CF Hackney",
+      "Strength1": "Strength",
+      "Metcon": "Metcon"
+    },
+  ];
+
+  var currentDay = $scope.workout[0];
+
+})
 
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
